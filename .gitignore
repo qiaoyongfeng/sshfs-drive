@@ -1,0 +1,15 @@
+# build output
+build/
+build*/
+*.exe
+*.dmg
+*.ipa
+*.apk
+*.aab
+sshfsmgr
+
+# installers
+*.msi
+
+# test snapshots
+shots/

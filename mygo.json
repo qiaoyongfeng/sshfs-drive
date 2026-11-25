@@ -1,0 +1,9 @@
+{
+  "name": "SSHFS Drive",
+  "slug": "sshfs-drive",
+  "identifier": "dev.qiaoyf.sshfsdrive",
+  "version": "2.0.3",
+  "copyright": "MIT licensed. Inspired by SSHFS-Win Manager, which it replaces.",
+  "main": ".",
+  "out": "build"
+}
