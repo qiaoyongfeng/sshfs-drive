@@ -105,7 +105,7 @@ FUSE 层变成一个盘符。**WinFsp 是唯一的外部依赖**，`sshfs.exe` �
 ## 开发
 
 ```sh
-# 依赖本地 mygo（go.mod 里 replace 到 ../mygo）
+# 需要 Go 1.27+；依赖全在 go.mod 里，直接拉
 go build ./...        && GOOS=linux go build ./... && GOOS=darwin go build ./...
 go vet ./...
 go test ./...         # 视图测试用 ui.NewTester，无需开窗口；挂载层用内存服务器替身
@@ -115,8 +115,9 @@ go run .              # 直接跑
 SSHFSMGR_TEST_HOST=192.0.2.10 SSHFSMGR_TEST_USER=user \
   SSHFSMGR_TEST_KEY=~/.ssh/id_ed25519 go test -run TestRealServer -v .
 
-# 打包 exe + 安装包（从 mygo 仓库调 CLI，避免把 CLI 依赖塞进 go.mod）
-cd ../mygo && go run ./cmd/mygo build ../sshfs-win-manager-mygo
+# 打包 exe + 安装包。window、图标和 NSIS 安装包由 MyGo 的 CLI 生成，
+# 用 go run 现取，不必把 CLI 的依赖塞进 go.mod。
+go run github.com/egoist/mygo/cmd/mygo@v0.10.0 build .
 ```
 
 测试覆盖：
