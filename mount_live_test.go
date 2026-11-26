@@ -77,7 +77,7 @@ func TestLiveMount(t *testing.T) {
 		t.Fatalf("the drive is not a directory: %v", fi.Mode())
 	}
 
-	dir := filepath.Join(root, "sshfsmgr-live-"+newID())
+	dir := filepath.Join(root, "sshfsdrive-live-"+newID())
 	if err := os.Mkdir(dir, 0o755); err != nil {
 		t.Fatalf("mkdir: %v", err)
 	}

@@ -51,7 +51,7 @@ func TestRealServer(t *testing.T) {
 	v := newVFS(sftpRemote{Client: session}, "/tmp", false, time.Second)
 	defer v.close()
 
-	dir := "/sshfsmgr-" + newID()
+	dir := "/sshfsdrive-" + newID()
 	if err := v.mkdir(dir, 0o755); err != nil {
 		t.Fatalf("mkdir: %v", err)
 	}

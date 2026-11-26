@@ -1,4 +1,4 @@
-module sshfsmgr
+module github.com/qiaoyongfeng/sshfs-drive
 
 go 1.27.3
 
