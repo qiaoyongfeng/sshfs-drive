@@ -30,8 +30,8 @@ FUSE 层变成一个盘符。**WinFsp 是唯一的外部依赖**，`sshfs.exe` �
 1. 安装 [WinFsp](https://winfsp.dev/rel/)（一个内核驱动 + 用户态 DLL，装完不用重启）。
    **不需要** SSHFS-Win，也不需要装 OpenSSH 客户端。
 2. 从 [Releases](https://github.com/qiaoyongfeng/sshfs-drive/releases/latest) 下载
-   `sshfs-drive-setup-*-amd64.exe` 安装，或者用免安装的 `SSHFS Drive.exe`。
-   想自己编译见下面的「构建」。
+   `sshfs-drive-setup-<版本>-amd64.exe` 安装，或者用免安装的 `SSHFS-Drive-<版本>.exe`。
+   想自己编译见下面的「开发」。
 3. 添加连接，点插头图标挂载。
 
 第一次启动会搬配置，不用重填：先看老 Electron 版留在 `%APPDATA%\sshfs-win-manager\` 的
